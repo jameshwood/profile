@@ -1,0 +1,178 @@
+/* TODO: design your profile with CSS */
+body {
+  font-size: 18px;
+  color: #00485A;
+  font-family: "Lora", serif;
+  background-color: #f7f9fc;
+}
+
+h1, h2, a {
+  font-family: "Roboto", sans-serif;
+}
+
+h2 {
+  color: #FFCE4C;
+}
+
+a {
+  text-decoration: none;
+}
+
+.card-green {
+  background-color: rgba(100, 161, 148, 0.75);
+  border-radius: 4px;
+  text-align: center;
+  box-shadow: 0px 0px 26px rgba(0, 0, 0, 0.15);
+  padding: 42px 50px;
+  margin-top: 24px;
+}
+
+.card-green p {
+  margin: 40px; /* Adjust the value as needed */
+}
+
+
+.img-circle {
+  width: 150px;
+  border-radius: 50%;
+}
+
+.container {
+  margin: 0 auto;
+  width: 700px;
+}
+
+.btn-blue {
+  background-color: #B8DFF2;
+  padding: 16px;
+  border-radius: 5px;
+  color: #64A194;
+  font-weight: bold;
+}
+
+.btn-blue:hover {
+  background-color: #00485A;
+}
+
+.list-inline{
+  padding: 2px;
+  li {
+    display: inline;
+    font-size: 45px;
+    letter-spacing: 10px;
+  }
+}
+
+.list-inline li a {
+  color:#B8DFF2;
+  :hover {
+    color: #00485A;
+  }
+}
+/* Style for the image */
+.icon-image {
+  width: 58px;
+  height: 37px;
+  object-fit: cover;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.list-inline li a:hover .icon-image {
+  content: url("images/Lief_Hover_Image.png")
+}
+
+/* Card Styling *
+
+
+
+/* Snowflakes for Falling Effect */
+.snow-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.snowflake {
+  position: absolute;
+  top: -10px;
+  color: white;
+  font-size: 10px;
+  opacity: 0.8;
+  animation: fall 10s linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+    opacity: 0.1;
+  }
+}
+
+/* Snow Accumulation Particles on Box */
+/* Snow Accumulation Particles on Box */
+.snow-particle {
+  position: absolute;
+  top: 0;
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.9;
+  animation: accumulate 3s linear forwards; /* Change to 'forwards' to end animation at the bottom */
+}
+
+/* Accumulating Animation for Snow Particles */
+@keyframes accumulate {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100px); /* Adjust this distance based on box size */
+    opacity: 0;
+  }
+}
+
+/* Snow accumulation effect on the top of the box */
+.card-green::before,
+.card-green::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background: white;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  opacity: 0.8;
+}
+
+/* Adds a layered effect to the snow accumulation */
+.card-green::after {
+  top: 8px;
+  left: 8px;
+  width: 90%;
+  height: 6px;
+  opacity: 0.6;
+  filter: blur(2px);
+}
+
+
+
+body {
+  background-image: url("images/House-l3.png");
+  background-size: cover;       /* Ensures the image covers the entire viewport */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-position: center;  /* Centers the image */
+  background-attachment: fixed; /* Makes the background image stay fixed while scrolling */
+}
